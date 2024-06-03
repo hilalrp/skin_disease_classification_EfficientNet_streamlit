@@ -10,7 +10,7 @@ st.set_page_config(
 )
 
 # Load the model
-clf = load_model("best_model_EfficientNetB0.keras")
+clf = load_model("skin_disease_model_EfficientNet.keras")
 
 # Title of the application
 st.title('Skin diseases classification')
