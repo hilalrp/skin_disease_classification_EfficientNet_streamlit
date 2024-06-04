@@ -10,7 +10,7 @@ st.set_page_config(
 )
 
 # Load the model
-clf = load_model("skin_disease_model_EfficientNet.keras")
+clf = load_model("best_model_CNN.h5")
 
 # Title of the application
 st.title('Skin diseases classification')
@@ -46,8 +46,7 @@ if uploaded_file is not None:
         # Predict the image
         Y_prediction = clf.predict(img_resized)
         y_pred = np.argmax(Y_prediction[0])
-        class_labels = ['Acne', 'Chickenpox', 'Eczema', 'Monkeypox','Psoriasis', 'Ringworm', 'Basal cell carcinoma',
-                        'Tinea-versicolor', 'Vitiligo', 'Warts']
+        class_labels = ['BA- cellulitis' ,'BA-impetigo','FU-athlete-foot', 'FU-nail-fungus', 'FU-ringworm' , 'PA-cutaneous-larva-migrans' ,  'VI-chickenpox' ,  'VI-shingles']
         output_val = "Prediction: {0} with {1:.2f}% confidence".format(class_labels[y_pred], Y_prediction[0, y_pred] * 100)
 
         # Display the prediction
