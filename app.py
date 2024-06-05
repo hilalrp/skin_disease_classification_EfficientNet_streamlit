@@ -10,15 +10,15 @@ st.set_page_config(
 )
 
 # Load the model
-clf = load_model("best_model_CNN.h5")
+clf = load_model("best_model_EfficientNetB0.h5")
 
 # Title of the application
 st.title('Skin diseases classification')
 st.write('Project objective: To build a predictive model to classify skin diseases based on image.')
 st.write('Problem Type: Multi-class Classification')
 st.write('Algorithm used: EfficientNet Transfer Learning')
-st.write("Data Source: [Skin Disease Roboflow](https://universe.roboflow.com/skin-diseases-jzde4/skin-diseases-i30ay)")
-st.write('Model Accuracy: 77%')
+st.write("Data Source: [Skin Disease Kaggle](https://www.kaggle.com/datasets/subirbiswas19/skin-disease-dataset)")
+st.write('Model Accuracy: 96%')
 st.write('View [code](https://github.com/hilalrp/skin_disease_classification_EfficientNet_streamlit)')
 st.write("This Project was created by [Hilal Rosyid Putra](https://www.linkedin.com/in/hilal-rosyid-putra-3b403a199/)")
 st.write("")
